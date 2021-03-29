@@ -8,6 +8,8 @@ Started project with wire framing
 
 using google font for text and fontawesome for  links
 
+adding javscript video:
+- jotted down notes on functions to add
 
 Welcome Kenneth,
 
