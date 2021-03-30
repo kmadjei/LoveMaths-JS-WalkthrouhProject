@@ -15,6 +15,13 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
+
+    document.getElementById("answer-box").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            checkAnswer();
+        }
+    });
+
     runGame("addition");
 });
 
@@ -65,6 +72,11 @@ function calculateCorrectAnswer() {
     
     // Gets the operands (the numbers) and the operator (plus, minus etc)
     //directly from the DOM -> parseInt() -> parses string and returns integer
+
+    document.getElementById("answer-box").value = ""; //sets input box empty after each game
+
+    document.getElementById("answer-box").focus(); //sets the focus of the cursor in answer box as soon as page reloads
+
     let operand1 = parseInt(document.getElementById("operand1").innerText);
     let operand2 = parseInt(document.getElementById("operand2").innerText);
     let operator = document.getElementById("operator").innerText;
