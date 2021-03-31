@@ -5,17 +5,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // iterate through all button elements in the array button
     for (let button of buttons) {
-        // listen for button click event and execute function
+        // listen for selected game event  and execute function
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type")=="submit") {
-                checkAnswer();
+                checkAnswer(); // Executes when submit button is clicked
             }else {
                 let gameType = this.getAttribute("data-type");
                 runGame(gameType);
             }
         });
     }
-
+    //executes to check answer when "enter" key is pressed
     document.getElementById("answer-box").addEventListener("keydown", function(event) {
         if (event.key === "Enter") {
             checkAnswer();
@@ -31,7 +31,7 @@ function runGame(gameType) {
     //math.random generates random number
 
     let num1 = Math.floor(Math.random() * 25) + 1;
-    let num2 = Math.floor(Math.random() * 25) + 1;
+    let num2 = Math.floor(Math.random() * 25) + 1; 
 
    // Selects and displays the question depending on the gameType
     // which we set when we called the function
@@ -41,6 +41,8 @@ function runGame(gameType) {
         displayMultiplyQuestion(num1, num2);
     } else if (gameType === "subtract") {
         displaySubtractQuestion(num1, num2);
+    } else if (gameType === "division") {
+        displayDivisionQuestion(num1, num2);
     } else {
         alert(`Unknown game type ${gameType}`);
         throw `Unknown game type ${gameType}, aborting...`; // stops JavaScript and executes error massage
@@ -68,7 +70,7 @@ function checkAnswer() {
    runGame(calculatedAnswer[1]);
 }
 
-function calculateCorrectAnswer() {
+function calculateCorrectAnswer() { 
     
     // Gets the operands (the numbers) and the operator (plus, minus etc)
     //directly from the DOM -> parseInt() -> parses string and returns integer
@@ -87,7 +89,9 @@ function calculateCorrectAnswer() {
         return [operand1 * operand2, "multiply"];
     } else if (operator === "-") {
         return [operand1 - operand2, "subtract"];
-    }  else {
+    } else if (operator === "/") {
+        return [operand1 / operand2, "division"];
+    } else {
         alert(`Unimplemented operator ${operator}`);
         throw `Unimplemented operator ${operator}, aborting!`;
     }
@@ -116,7 +120,7 @@ function displayAdditionQuestion(operand1, operand2) {
 }
 
 function displaySubtractQuestion(operand1, operand2) {
-    // ternary operator is used to assign the larger operand
+    // ternary operator is used to assign the larger operand  to #operand1 ID
     document.getElementById("operand1").textContent = operand1 > operand2 ? operand1 : operand2;
     document.getElementById("operand2").textContent = operand1 > operand2 ? operand2 : operand1;
     document.getElementById("operator").textContent = "-";
@@ -126,4 +130,33 @@ function displayMultiplyQuestion(operand1, operand2) {
     document.getElementById("operand1").textContent = operand1;
     document.getElementById("operand2").textContent = operand2;
     document.getElementById("operator").textContent = "x";
+}
+
+function displayDivisionQuestion(operand1, operand2) {
+    // only displays condition for whole number calculations
+    //Condition to assign the to assign the larger operand  to #operand1 ID
+    if (operand1 > operand2) {
+        let remainderCheck = operand1 % operand2;
+        // displays number only if there is no remainder for division
+        if (remainderCheck === 0) {
+            document.getElementById("operand1").textContent = operand1;
+            document.getElementById("operand2").textContent = operand2;
+            document.getElementById("operator").textContent = "/";
+        } else {
+            // generates random number again if condition is not satisfied
+            runGame("division"); 
+        }
+    } else {
+        let remainderCheck = operand2 % operand1;
+        // displays number only if there is no remainder for division
+        if (remainderCheck === 0) {
+            document.getElementById("operand1").textContent = operand2;
+            document.getElementById("operand2").textContent = operand1;
+            document.getElementById("operator").textContent = "/";
+        } else {
+            // generates random number again if condition is not satisfied
+            runGame("division"); 
+        }
+    }
+
 }
