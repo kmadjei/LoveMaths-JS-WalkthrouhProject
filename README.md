@@ -4,7 +4,7 @@
 
 This projects features a single web application that generates random math quiz based on the user's selection.
 
-[preview](https://kmadjei.github.io/LoveMaths-JS-WalkthrouhProject/)
+👉 [Preview](https://kmadjei.github.io/LoveMaths-JS-WalkthrouhProject/)
 
 
  
