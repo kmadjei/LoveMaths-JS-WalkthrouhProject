@@ -1,99 +1,62 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Started project with wire framing
-- games area
-- controls area
-- question area
-- score area
+# Love Maths - JavaScript Walk-through Project
 
-- wrote down function ideas before coding for each question
-- tested the execution for each game implemented before jumping to the next
+This projects features a single web application that generates random math quiz based on the user's selection.
 
-using google font for text and fontawesome for  links
+[preview](https://kmadjei.github.io/LoveMaths-JS-WalkthrouhProject/)
 
-adding javascript video:
-- jotted down notes on functions to add
 
-# Your Project's Name
-
-One or two paragraphs providing an overview of your project.
-
-Essentially, this part is your sales pitch.
  
 ## UX
- 
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
+This website is for anyone interested in playing a math game if they are up for the challenge.
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+**User Objectives**
+1. As a user I expect this single web application  to be simple and easy to use
+2. User has straightforward instruction on how to play the game and also able to intuitively able to interact with the content
+3. Users can see their progress as they continue play the game by viewing amount of questions they got wrong or correct
+4. As a user I would like an indication that corrects me if am wrong and when I am correct
+5. When a user completes a question another question is generated 
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
- 
-### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
-
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
-
-### Features Left to Implement
-- Another feature idea
+- Games Area - presents the content which the user will interact with 
+- Controls Area - User is able to select icon for the desired math game after web application loads
+- Question Area - displays the challenge for the user to take on
+- Score Area - showcases the users progress throughout math the game
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+- [HTML](https://www.w3schools.com/html/default.asp)
+    - **HTML** is used in this project to present the required elements / contents for this web application
 
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
+- [CSS](https://www.w3schools.com/css/default.asp)
+    - This project uses **CSS** to style the web page contents
 
+- [JavaScript](https://www.w3schools.com/js/default.asp)
+    - This project uses **JavaScript** to manipulate the dom to provide interactive contents for the users.
+
+- [Font Awesome](https://fontawesome.com/)
+    - This project uses **Font Awesome 5.7** to provide icons for the game.    
 
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+1. Functionality tests
+    - tested game functions to make sure game processes each math operation and sends feed indicating user answered question correctly or incorrectly
+    - after each question completed by the user, the answer field should clear
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
-
-## Deployment
-
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
+2. Responsiveness 
+    - Chrome dev tools was used to change the views of the web application
+        - Game application contents should still be clear and simple for users to interact with
 
 
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
-### Media
-- The photos used in this site were obtained from ...
+- The contents for this [project](https://github.com/Code-Institute-Solutions/JS-Essentials-Project/tree/master/13-Tidying%20Up) was provided by the Code Institute
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
-
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.pn
+- I received guidance from the Code Institute learning platform to build this project.
