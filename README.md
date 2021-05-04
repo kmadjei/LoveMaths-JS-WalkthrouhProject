@@ -2,7 +2,7 @@
 
 # Love Maths - JavaScript Walk-through Project
 
-This projects features a single web application that generates random math quiz based on the user's selection.
+This project features a single web application that generates random math quiz based on the user's selection.
 
 👉 [Preview](https://kmadjei.github.io/LoveMaths-JS-WalkthrouhProject/)
 
