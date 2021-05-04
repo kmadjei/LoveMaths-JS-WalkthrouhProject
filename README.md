@@ -22,9 +22,9 @@ This website is for anyone interested in playing a math game if they are up for 
 ## Features
 
 - Games Area - presents the content which the user will interact with 
-- Controls Area - User is able to select icon for the desired math game after web application loads
-- Question Area - displays the challenge for the user to take on
-- Score Area - showcases the users progress throughout math the game
+- Controls Area - provides users the ability to choose desired game
+- Question Area - displays the challenge question for the user 
+- Score Area - showcases the user's progress throughout math the game
 
 ## Technologies Used
 
