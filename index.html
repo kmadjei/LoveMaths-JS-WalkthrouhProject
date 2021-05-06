@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
     <title>Love Maths</title>
 </head>
 <body>
@@ -16,21 +16,33 @@
     </h1>
 
     <div class="game-area">
-        <h3>Pick a Challenge</h3>
+        <h2>Pick a Challenge</h3>
         <div class="controls-area">
             <!-- Buttons with custom attributes "data-type" -->
-            <button data-type="addition" class="btn btn--big btn--green">
-                <i class="fas fa-plus"></i>
-            </button>
-            <button data-type="subtract" class="btn btn--big btn--blue">
-                <i class="fas fa-minus"></i>
-            </button>
-            <button data-type="multiply" class="btn btn--big btn--orange">
-                <i class="fas fa-times"></i>
-            </button>
-            <button data-type="division" class="btn btn--big btn--red">
-                <i class="fas fa-divide"></i>
-            </button>
+            <div class="btn-container">
+                <button data-type="addition" class="btn btn--big btn--green">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <span class="operand-title">addition</span>
+            </div>
+            <div class="btn-container">
+                <button data-type="subtract" class="btn btn--big btn--blue">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <span class="operand-title">subtract</span>
+            </div>
+            <div class="btn-container">
+                <button data-type="multiply" class="btn btn--big btn--orange">
+                    <i class="fas fa-times"></i>
+                </button>
+                <span class="operand-title">multiply</span>
+            </div>
+            <div class="btn-container">
+                <button data-type="division" class="btn btn--big btn--red">
+                    <i class="fas fa-divide"></i>
+                </button>
+                <span class="operand-title">division</span>
+            </div>              
         </div>
         <div class="question-area">
             <span id="operand1">0</span>
@@ -40,7 +52,7 @@
             <p class="answer-message">Enter Answer:</p>
             <input id="answer-box" name="answer" type="number">
         </div>
-        <button data-type="submit" class="btn btn--gray">Submit Answer</button>
+        <button id="submit-btn" data-type="submit" class="btn btn--gray">Submit Answer</button>
     </div>
 
     <div class="score-area">
